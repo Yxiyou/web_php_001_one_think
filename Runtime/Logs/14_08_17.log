@@ -1,0 +1,1543 @@
+[ 2014-08-17T17:27:13+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000118s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000641s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000052s ]
+SQL: SHOW COLUMNS FROM `onethink_ucenter_member` [ RunTime:0.004545s ]
+SQL: SELECT * FROM `onethink_ucenter_member` WHERE ( `username` = 'admin' ) LIMIT 1   [ RunTime:0.000825s ]
+SQL: UPDATE `onethink_ucenter_member` SET `last_login_time`=1408267632,`last_login_ip`='2130706433' WHERE ( `id` = 1 ) [ RunTime:0.067752s ]
+SQL: SHOW COLUMNS FROM `onethink_member` [ RunTime:0.009671s ]
+SQL: SELECT `uid`,`nickname`,`sex`,`birthday`,`qq`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status` FROM `onethink_member` WHERE ( `uid` = 1 ) LIMIT 1   [ RunTime:0.001663s ]
+SQL: SHOW COLUMNS FROM `onethink_action` [ RunTime:0.009282s ]
+SQL: SELECT * FROM `onethink_action` WHERE ( `name` = 'user_login' ) LIMIT 1   [ RunTime:0.001173s ]
+SQL: SHOW COLUMNS FROM `onethink_action_log` [ RunTime:0.006484s ]
+SQL: INSERT INTO `onethink_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES (1,1,2130706433,'member',1,1408267632,'操作url：/onethink/index.php?s=/admin/public/login.html') [ RunTime:0.000889s ]
+SQL: SELECT * FROM `onethink_action` WHERE ( `name` = 'user_login' ) LIMIT 1   [ RunTime:0.000715s ]
+NOTIC: [8] Undefined offset: 1 X:\www\onethink\Application\Common\Common\function.php 第 605 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, null given X:\www\onethink\Application\Common\Common\function.php 第 605 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `onethink_action_log` WHERE ( `action_id` = 1 ) AND ( `user_id` = 1 ) AND ( `create_time` > 1408181232 ) LIMIT 1   [ RunTime:0.000616s ]
+SQL: SHOW COLUMNS FROM `onethink_member` [ RunTime:0.006975s ]
+SQL: UPDATE `onethink_member` SET `score`=score+10 WHERE ( uid=1 AND status>-1 ) [ RunTime:0.001340s ]
+SQL: UPDATE `onethink_member` SET `login`=`login`+1,`last_login_time`=1408267632,`last_login_ip`='2130706433' WHERE ( `uid` = 1 ) [ RunTime:0.000865s ]
+
+[ 2014-08-17T18:29:13+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/category/edit.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000116s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000585s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000129s ]
+SQL: SHOW COLUMNS FROM `onethink_category` [ RunTime:0.007403s ]
+NOTIC: [8] Undefined index: name X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: meta_title X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: keywords X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: meta_title X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: type X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: reply_model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] json_encode() expects at least 1 parameter, 0 given X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 934 行.
+NOTIC: [8] Undefined index: extend X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+SQL: UPDATE `onethink_category` SET `sort`=1,`title`='linux',`update_time`=1408271353,`status`=1 WHERE ( `id` = 2 ) [ RunTime:0.002313s ]
+SQL: SHOW COLUMNS FROM `onethink_action` [ RunTime:0.012731s ]
+SQL: SELECT * FROM `onethink_action` WHERE ( `name` = 'update_category' ) LIMIT 1   [ RunTime:0.002597s ]
+SQL: SHOW COLUMNS FROM `onethink_action_log` [ RunTime:0.008438s ]
+SQL: INSERT INTO `onethink_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES (11,1,2130706433,'category',2,1408271353,'操作url：/onethink/index.php?s=/admin/category/edit.html') [ RunTime:0.002865s ]
+
+[ 2014-08-17T18:29:43+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/category/edit.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000111s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000564s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000119s ]
+SQL: SHOW COLUMNS FROM `onethink_category` [ RunTime:0.006286s ]
+NOTIC: [8] Undefined index: name X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+
+[ 2014-08-17T18:29:46+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/category/edit.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000145s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000962s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000087s ]
+SQL: SHOW COLUMNS FROM `onethink_category` [ RunTime:0.007692s ]
+NOTIC: [8] Undefined index: name X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: meta_title X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: keywords X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: meta_title X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: type X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: reply_model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] json_encode() expects at least 1 parameter, 0 given X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 934 行.
+NOTIC: [8] Undefined index: extend X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+SQL: UPDATE `onethink_category` SET `sort`=1,`title`='默认分类',`update_time`=1408271386,`status`=1 WHERE ( `id` = 2 ) [ RunTime:0.000802s ]
+NOTIC: [2] unlink(./Runtime/Temp/cbc58bd3cdec352c980d0ad729b5c219.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory X:\www\onethink\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+SQL: SHOW COLUMNS FROM `onethink_action` [ RunTime:0.005626s ]
+SQL: SELECT * FROM `onethink_action` WHERE ( `name` = 'update_category' ) LIMIT 1   [ RunTime:0.001596s ]
+SQL: SHOW COLUMNS FROM `onethink_action_log` [ RunTime:0.005887s ]
+SQL: INSERT INTO `onethink_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES (11,1,2130706433,'category',2,1408271386,'操作url：/onethink/index.php?s=/admin/category/edit.html') [ RunTime:0.000552s ]
+
+[ 2014-08-17T18:30:36+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/category/edit/id/2/pid/1.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000192s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000829s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000091s ]
+SQL: SHOW COLUMNS FROM `onethink_category` [ RunTime:0.004838s ]
+SQL: SELECT * FROM `onethink_category` WHERE ( `name` = 'blog_linux' ) AND ( `id` <> '2' ) LIMIT 1   [ RunTime:0.001138s ]
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: reply_model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] json_encode() expects at least 1 parameter, 0 given X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 934 行.
+NOTIC: [8] Undefined index: extend X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+SQL: UPDATE `onethink_category` SET `title`='linux',`name`='blog_linux',`allow_publish`=1,`check`=1,`model`='2,3',`type`='2,1,3',`display`=1,`reply`=0,`sort`=1,`list_row`=10,`meta_title`='',`keywords`='',`description`='',`template_index`='',`template_lists`='',`template_detail`='',`template_edit`='',`pid`=1,`update_time`=1408271436,`status`=1 WHERE ( `id` = 2 ) [ RunTime:0.000708s ]
+NOTIC: [2] unlink(./Runtime/Temp/cbc58bd3cdec352c980d0ad729b5c219.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory X:\www\onethink\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+SQL: SHOW COLUMNS FROM `onethink_action` [ RunTime:0.004652s ]
+SQL: SELECT * FROM `onethink_action` WHERE ( `name` = 'update_category' ) LIMIT 1   [ RunTime:0.000673s ]
+SQL: SHOW COLUMNS FROM `onethink_action_log` [ RunTime:0.004324s ]
+SQL: INSERT INTO `onethink_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES (11,1,2130706433,'category',2,1408271436,'操作url：/onethink/index.php?s=/admin/category/edit/id/2/pid/1.html') [ RunTime:0.000620s ]
+
+[ 2014-08-17T18:35:46+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/category/edit/id/4/pid/3.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000114s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000584s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000083s ]
+SQL: SHOW COLUMNS FROM `onethink_category` [ RunTime:0.006107s ]
+SQL: SELECT * FROM `onethink_category` WHERE ( `name` = 'blog_linux' ) AND ( `id` <> '4' ) LIMIT 1   [ RunTime:0.002255s ]
+
+[ 2014-08-17T18:35:57+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/category/edit/id/4/pid/3.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000114s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000628s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000086s ]
+SQL: SHOW COLUMNS FROM `onethink_category` [ RunTime:0.004358s ]
+SQL: SELECT * FROM `onethink_category` WHERE ( `name` = 'blog_linux' ) AND ( `id` <> '4' ) LIMIT 1   [ RunTime:0.001003s ]
+
+[ 2014-08-17T18:36:09+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/category/edit/id/4/pid/3.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000208s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001093s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000136s ]
+SQL: SHOW COLUMNS FROM `onethink_category` [ RunTime:0.009072s ]
+SQL: SELECT * FROM `onethink_category` WHERE ( `name` = 'class_linux' ) AND ( `id` <> '4' ) LIMIT 1   [ RunTime:0.003018s ]
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: reply_model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] json_encode() expects at least 1 parameter, 0 given X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 934 行.
+NOTIC: [8] Undefined index: extend X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+SQL: UPDATE `onethink_category` SET `title`='linux',`name`='class_linux',`allow_publish`=1,`check`=1,`model`='2,3',`type`='2,3',`display`=1,`reply`=1,`sort`=0,`list_row`=10,`meta_title`='',`keywords`='',`description`='',`template_index`='',`template_lists`='Article/lists_topic',`template_detail`='Article/Article/detail_topic',`template_edit`='',`pid`=3,`update_time`=1408271769,`status`=1 WHERE ( `id` = 4 ) [ RunTime:0.001990s ]
+NOTIC: [2] unlink(./Runtime/Temp/cbc58bd3cdec352c980d0ad729b5c219.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory X:\www\onethink\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+SQL: SHOW COLUMNS FROM `onethink_action` [ RunTime:0.007646s ]
+SQL: SELECT * FROM `onethink_action` WHERE ( `name` = 'update_category' ) LIMIT 1   [ RunTime:0.001482s ]
+SQL: SHOW COLUMNS FROM `onethink_action_log` [ RunTime:0.008429s ]
+SQL: INSERT INTO `onethink_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES (11,1,2130706433,'category',4,1408271769,'操作url：/onethink/index.php?s=/admin/category/edit/id/4/pid/3.html') [ RunTime:0.003210s ]
+
+[ 2014-08-17T18:39:04+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/category/add/pid/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000118s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000777s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000128s ]
+SQL: SHOW COLUMNS FROM `onethink_category` [ RunTime:0.005679s ]
+
+[ 2014-08-17T18:39:16+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/category/add/pid/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000259s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001154s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000083s ]
+SQL: SHOW COLUMNS FROM `onethink_category` [ RunTime:0.009831s ]
+SQL: SELECT * FROM `onethink_category` WHERE ( `name` = 'blog_c' ) LIMIT 1   [ RunTime:0.002402s ]
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: reply_model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] json_encode() expects at least 1 parameter, 0 given X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 934 行.
+NOTIC: [8] Undefined index: extend X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+SQL: INSERT INTO `onethink_category` (`title`,`name`,`allow_publish`,`check`,`type`,`display`,`reply`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`id`,`pid`,`create_time`,`update_time`,`status`) VALUES ('c','blog_c',1,0,'2',1,0,0,10,'','','','','','','',0,2,1408271956,1408271956,1) [ RunTime:0.001404s ]
+NOTIC: [2] unlink(./Runtime/Temp/cbc58bd3cdec352c980d0ad729b5c219.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory X:\www\onethink\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+SQL: SHOW COLUMNS FROM `onethink_action` [ RunTime:0.008692s ]
+SQL: SELECT * FROM `onethink_action` WHERE ( `name` = 'update_category' ) LIMIT 1   [ RunTime:0.001322s ]
+SQL: SHOW COLUMNS FROM `onethink_action_log` [ RunTime:0.006036s ]
+SQL: INSERT INTO `onethink_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES (11,1,2130706433,'category',39,1408271956,'操作url：/onethink/index.php?s=/admin/category/add/pid/2.html') [ RunTime:0.001763s ]
+
+[ 2014-08-17T18:39:35+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/category/remove/id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000126s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001268s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000220s ]
+SQL: SHOW COLUMNS FROM `onethink_category` [ RunTime:0.006756s ]
+SQL: SELECT `id` FROM `onethink_category` WHERE ( `pid` = 2 )  [ RunTime:0.003467s ]
+
+[ 2014-08-17T18:39:44+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/category/remove/id/39.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000213s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001079s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000068s ]
+SQL: SHOW COLUMNS FROM `onethink_category` [ RunTime:0.005504s ]
+SQL: SELECT `id` FROM `onethink_category` WHERE ( `pid` = 39 )  [ RunTime:0.001774s ]
+SQL: SHOW COLUMNS FROM `onethink_document` [ RunTime:0.006416s ]
+SQL: SELECT `id` FROM `onethink_document` WHERE ( `category_id` = 39 )  [ RunTime:0.001539s ]
+SQL: DELETE FROM `onethink_category` WHERE ( `id` = 39 ) [ RunTime:0.001542s ]
+SQL: SHOW COLUMNS FROM `onethink_action` [ RunTime:0.006116s ]
+SQL: SELECT * FROM `onethink_action` WHERE ( `name` = 'update_category' ) LIMIT 1   [ RunTime:0.001673s ]
+SQL: SHOW COLUMNS FROM `onethink_action_log` [ RunTime:0.005182s ]
+SQL: INSERT INTO `onethink_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES (11,1,2130706433,'category',39,1408271984,'操作url：/onethink/index.php?s=/admin/category/remove/id/39.html') [ RunTime:0.001652s ]
+
+[ 2014-08-17T18:39:57+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/category/add/pid/1.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000123s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000828s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000143s ]
+SQL: SHOW COLUMNS FROM `onethink_category` [ RunTime:0.008411s ]
+SQL: SELECT * FROM `onethink_category` WHERE ( `name` = 'blog_c' ) LIMIT 1   [ RunTime:0.001765s ]
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: reply_model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] json_encode() expects at least 1 parameter, 0 given X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 934 行.
+NOTIC: [8] Undefined index: extend X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+SQL: INSERT INTO `onethink_category` (`title`,`name`,`allow_publish`,`check`,`type`,`display`,`reply`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`id`,`pid`,`create_time`,`update_time`,`status`) VALUES ('c','blog_c',1,0,'2',1,0,0,10,'','','','','','','',0,1,1408271997,1408271997,1) [ RunTime:0.001447s ]
+NOTIC: [2] unlink(./Runtime/Temp/cbc58bd3cdec352c980d0ad729b5c219.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory X:\www\onethink\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+SQL: SHOW COLUMNS FROM `onethink_action` [ RunTime:0.009032s ]
+SQL: SELECT * FROM `onethink_action` WHERE ( `name` = 'update_category' ) LIMIT 1   [ RunTime:0.001605s ]
+SQL: SHOW COLUMNS FROM `onethink_action_log` [ RunTime:0.010384s ]
+SQL: INSERT INTO `onethink_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES (11,1,2130706433,'category',40,1408271997,'操作url：/onethink/index.php?s=/admin/category/add/pid/1.html') [ RunTime:0.002655s ]
+
+[ 2014-08-17T18:40:18+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/category/edit.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000124s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001131s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000090s ]
+SQL: SHOW COLUMNS FROM `onethink_category` [ RunTime:0.006921s ]
+NOTIC: [8] Undefined index: name X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: meta_title X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: keywords X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: meta_title X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: type X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: reply_model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] json_encode() expects at least 1 parameter, 0 given X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 934 行.
+NOTIC: [8] Undefined index: extend X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+SQL: UPDATE `onethink_category` SET `sort`=0,`title`='linux',`update_time`=1408272018,`status`=1 WHERE ( `id` = 2 ) [ RunTime:0.003169s ]
+NOTIC: [2] unlink(./Runtime/Temp/cbc58bd3cdec352c980d0ad729b5c219.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory X:\www\onethink\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+SQL: SHOW COLUMNS FROM `onethink_action` [ RunTime:0.006545s ]
+SQL: SELECT * FROM `onethink_action` WHERE ( `name` = 'update_category' ) LIMIT 1   [ RunTime:0.001389s ]
+SQL: SHOW COLUMNS FROM `onethink_action_log` [ RunTime:0.007487s ]
+SQL: INSERT INTO `onethink_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES (11,1,2130706433,'category',2,1408272018,'操作url：/onethink/index.php?s=/admin/category/edit.html') [ RunTime:0.000926s ]
+
+[ 2014-08-17T18:40:20+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/category/edit.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000118s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000647s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000086s ]
+SQL: SHOW COLUMNS FROM `onethink_category` [ RunTime:0.006929s ]
+NOTIC: [8] Undefined index: name X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: meta_title X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: keywords X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: meta_title X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: type X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: reply_model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] json_encode() expects at least 1 parameter, 0 given X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 934 行.
+NOTIC: [8] Undefined index: extend X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+SQL: UPDATE `onethink_category` SET `sort`=1,`title`='c',`update_time`=1408272020,`status`=1 WHERE ( `id` = 40 ) [ RunTime:0.001123s ]
+NOTIC: [2] unlink(./Runtime/Temp/cbc58bd3cdec352c980d0ad729b5c219.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory X:\www\onethink\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+SQL: SHOW COLUMNS FROM `onethink_action` [ RunTime:0.007711s ]
+SQL: SELECT * FROM `onethink_action` WHERE ( `name` = 'update_category' ) LIMIT 1   [ RunTime:0.001949s ]
+SQL: SHOW COLUMNS FROM `onethink_action_log` [ RunTime:0.005411s ]
+SQL: INSERT INTO `onethink_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES (11,1,2130706433,'category',40,1408272020,'操作url：/onethink/index.php?s=/admin/category/edit.html') [ RunTime:0.001438s ]
+
+[ 2014-08-17T18:40:45+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/category/add/pid/1.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000112s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000575s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000122s ]
+SQL: SHOW COLUMNS FROM `onethink_category` [ RunTime:0.006825s ]
+SQL: SELECT * FROM `onethink_category` WHERE ( `name` = 'blog_web' ) LIMIT 1   [ RunTime:0.002384s ]
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: reply_model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] json_encode() expects at least 1 parameter, 0 given X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 934 行.
+NOTIC: [8] Undefined index: extend X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+SQL: INSERT INTO `onethink_category` (`title`,`name`,`allow_publish`,`check`,`type`,`display`,`reply`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`id`,`pid`,`create_time`,`update_time`,`status`) VALUES ('web','blog_web',1,0,'2',1,0,0,10,'','','','','','','',0,1,1408272045,1408272045,1) [ RunTime:0.001412s ]
+NOTIC: [2] unlink(./Runtime/Temp/cbc58bd3cdec352c980d0ad729b5c219.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory X:\www\onethink\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+SQL: SHOW COLUMNS FROM `onethink_action` [ RunTime:0.007941s ]
+SQL: SELECT * FROM `onethink_action` WHERE ( `name` = 'update_category' ) LIMIT 1   [ RunTime:0.001295s ]
+SQL: SHOW COLUMNS FROM `onethink_action_log` [ RunTime:0.004679s ]
+SQL: INSERT INTO `onethink_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES (11,1,2130706433,'category',41,1408272045,'操作url：/onethink/index.php?s=/admin/category/add/pid/1.html') [ RunTime:0.001810s ]
+
+[ 2014-08-17T18:41:14+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/category/add/pid/1.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000119s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000677s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000097s ]
+SQL: SHOW COLUMNS FROM `onethink_category` [ RunTime:0.012757s ]
+SQL: SELECT * FROM `onethink_category` WHERE ( `name` = 'blog_javascript' ) LIMIT 1   [ RunTime:0.002765s ]
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: reply_model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] json_encode() expects at least 1 parameter, 0 given X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 934 行.
+NOTIC: [8] Undefined index: extend X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+SQL: INSERT INTO `onethink_category` (`title`,`name`,`allow_publish`,`check`,`type`,`display`,`reply`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`id`,`pid`,`create_time`,`update_time`,`status`) VALUES ('javascript','blog_javascript',1,0,'2',1,0,0,10,'','','','','','','',0,1,1408272073,1408272073,1) [ RunTime:0.003164s ]
+NOTIC: [2] unlink(./Runtime/Temp/cbc58bd3cdec352c980d0ad729b5c219.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory X:\www\onethink\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+SQL: SHOW COLUMNS FROM `onethink_action` [ RunTime:0.007214s ]
+SQL: SELECT * FROM `onethink_action` WHERE ( `name` = 'update_category' ) LIMIT 1   [ RunTime:0.001555s ]
+SQL: SHOW COLUMNS FROM `onethink_action_log` [ RunTime:0.007269s ]
+SQL: INSERT INTO `onethink_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES (11,1,2130706433,'category',42,1408272073,'操作url：/onethink/index.php?s=/admin/category/add/pid/1.html') [ RunTime:0.002210s ]
+
+[ 2014-08-17T18:41:42+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/category/add/pid/1.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000121s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000707s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000088s ]
+SQL: SHOW COLUMNS FROM `onethink_category` [ RunTime:0.009243s ]
+SQL: SELECT * FROM `onethink_category` WHERE ( `name` = 'blog_databases' ) LIMIT 1   [ RunTime:0.003505s ]
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: reply_model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] json_encode() expects at least 1 parameter, 0 given X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 934 行.
+NOTIC: [8] Undefined index: extend X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+SQL: INSERT INTO `onethink_category` (`title`,`name`,`allow_publish`,`check`,`type`,`display`,`reply`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`id`,`pid`,`create_time`,`update_time`,`status`) VALUES ('databases','blog_databases',1,0,'2',1,0,0,10,'','','','','','','',0,1,1408272101,1408272101,1) [ RunTime:0.002550s ]
+NOTIC: [2] unlink(./Runtime/Temp/cbc58bd3cdec352c980d0ad729b5c219.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory X:\www\onethink\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+SQL: SHOW COLUMNS FROM `onethink_action` [ RunTime:0.007749s ]
+SQL: SELECT * FROM `onethink_action` WHERE ( `name` = 'update_category' ) LIMIT 1   [ RunTime:0.002977s ]
+SQL: SHOW COLUMNS FROM `onethink_action_log` [ RunTime:0.006687s ]
+SQL: INSERT INTO `onethink_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES (11,1,2130706433,'category',43,1408272101,'操作url：/onethink/index.php?s=/admin/category/add/pid/1.html') [ RunTime:0.002017s ]
+
+[ 2014-08-17T18:42:11+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/category/add/pid/1.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000122s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000644s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000140s ]
+SQL: SHOW COLUMNS FROM `onethink_category` [ RunTime:0.008476s ]
+SQL: SELECT * FROM `onethink_category` WHERE ( `name` = 'blog_php' ) LIMIT 1   [ RunTime:0.002346s ]
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: reply_model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] json_encode() expects at least 1 parameter, 0 given X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 934 行.
+NOTIC: [8] Undefined index: extend X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+SQL: INSERT INTO `onethink_category` (`title`,`name`,`allow_publish`,`check`,`type`,`display`,`reply`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`id`,`pid`,`create_time`,`update_time`,`status`) VALUES ('php','blog_php',1,0,'2',1,0,0,10,'','','','','','','',0,1,1408272131,1408272131,1) [ RunTime:0.001611s ]
+NOTIC: [2] unlink(./Runtime/Temp/cbc58bd3cdec352c980d0ad729b5c219.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory X:\www\onethink\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+SQL: SHOW COLUMNS FROM `onethink_action` [ RunTime:0.006785s ]
+SQL: SELECT * FROM `onethink_action` WHERE ( `name` = 'update_category' ) LIMIT 1   [ RunTime:0.001264s ]
+SQL: SHOW COLUMNS FROM `onethink_action_log` [ RunTime:0.006479s ]
+SQL: INSERT INTO `onethink_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES (11,1,2130706433,'category',44,1408272131,'操作url：/onethink/index.php?s=/admin/category/add/pid/1.html') [ RunTime:0.001908s ]
+
+[ 2014-08-17T18:46:33+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/category/edit.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000255s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001599s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000087s ]
+SQL: SHOW COLUMNS FROM `onethink_category` [ RunTime:0.010246s ]
+NOTIC: [8] Undefined index: name X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: meta_title X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: keywords X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: meta_title X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: type X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: reply_model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] json_encode() expects at least 1 parameter, 0 given X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 934 行.
+NOTIC: [8] Undefined index: extend X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+SQL: UPDATE `onethink_category` SET `sort`=0,`title`='Linux',`update_time`=1408272392,`status`=1 WHERE ( `id` = 2 ) [ RunTime:0.002065s ]
+NOTIC: [2] unlink(./Runtime/Temp/cbc58bd3cdec352c980d0ad729b5c219.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory X:\www\onethink\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+SQL: SHOW COLUMNS FROM `onethink_action` [ RunTime:0.008038s ]
+SQL: SELECT * FROM `onethink_action` WHERE ( `name` = 'update_category' ) LIMIT 1   [ RunTime:0.001122s ]
+SQL: SHOW COLUMNS FROM `onethink_action_log` [ RunTime:0.006924s ]
+SQL: INSERT INTO `onethink_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES (11,1,2130706433,'category',2,1408272392,'操作url：/onethink/index.php?s=/admin/category/edit.html') [ RunTime:0.001688s ]
+
+[ 2014-08-17T18:46:35+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/category/edit.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000143s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000696s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000260s ]
+SQL: SHOW COLUMNS FROM `onethink_category` [ RunTime:0.006092s ]
+NOTIC: [8] Undefined index: name X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: meta_title X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: keywords X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: meta_title X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: type X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: reply_model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] json_encode() expects at least 1 parameter, 0 given X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 934 行.
+NOTIC: [8] Undefined index: extend X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+SQL: UPDATE `onethink_category` SET `sort`=0,`title`='Web',`update_time`=1408272395,`status`=1 WHERE ( `id` = 41 ) [ RunTime:0.001397s ]
+NOTIC: [2] unlink(./Runtime/Temp/cbc58bd3cdec352c980d0ad729b5c219.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory X:\www\onethink\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+SQL: SHOW COLUMNS FROM `onethink_action` [ RunTime:0.007710s ]
+SQL: SELECT * FROM `onethink_action` WHERE ( `name` = 'update_category' ) LIMIT 1   [ RunTime:0.001612s ]
+SQL: SHOW COLUMNS FROM `onethink_action_log` [ RunTime:0.004772s ]
+SQL: INSERT INTO `onethink_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES (11,1,2130706433,'category',41,1408272395,'操作url：/onethink/index.php?s=/admin/category/edit.html') [ RunTime:0.002325s ]
+
+[ 2014-08-17T18:46:38+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/category/edit.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000186s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001165s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000088s ]
+SQL: SHOW COLUMNS FROM `onethink_category` [ RunTime:0.006482s ]
+NOTIC: [8] Undefined index: name X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: meta_title X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: keywords X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: meta_title X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: type X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: reply_model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] json_encode() expects at least 1 parameter, 0 given X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 934 行.
+NOTIC: [8] Undefined index: extend X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+SQL: UPDATE `onethink_category` SET `sort`=0,`title`='Javascript',`update_time`=1408272398,`status`=1 WHERE ( `id` = 42 ) [ RunTime:0.003528s ]
+NOTIC: [2] unlink(./Runtime/Temp/cbc58bd3cdec352c980d0ad729b5c219.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory X:\www\onethink\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+SQL: SHOW COLUMNS FROM `onethink_action` [ RunTime:0.005504s ]
+SQL: SELECT * FROM `onethink_action` WHERE ( `name` = 'update_category' ) LIMIT 1   [ RunTime:0.001819s ]
+SQL: SHOW COLUMNS FROM `onethink_action_log` [ RunTime:0.005489s ]
+SQL: INSERT INTO `onethink_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES (11,1,2130706433,'category',42,1408272398,'操作url：/onethink/index.php?s=/admin/category/edit.html') [ RunTime:0.000740s ]
+
+[ 2014-08-17T18:46:41+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/category/edit.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000132s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000858s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000062s ]
+SQL: SHOW COLUMNS FROM `onethink_category` [ RunTime:0.006893s ]
+NOTIC: [8] Undefined index: name X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: meta_title X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: keywords X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: meta_title X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: type X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: reply_model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] json_encode() expects at least 1 parameter, 0 given X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 934 行.
+NOTIC: [8] Undefined index: extend X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+SQL: UPDATE `onethink_category` SET `sort`=0,`title`='Databases',`update_time`=1408272401,`status`=1 WHERE ( `id` = 43 ) [ RunTime:0.001401s ]
+NOTIC: [2] unlink(./Runtime/Temp/cbc58bd3cdec352c980d0ad729b5c219.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory X:\www\onethink\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+SQL: SHOW COLUMNS FROM `onethink_action` [ RunTime:0.004471s ]
+SQL: SELECT * FROM `onethink_action` WHERE ( `name` = 'update_category' ) LIMIT 1   [ RunTime:0.001567s ]
+SQL: SHOW COLUMNS FROM `onethink_action_log` [ RunTime:0.007202s ]
+SQL: INSERT INTO `onethink_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES (11,1,2130706433,'category',43,1408272401,'操作url：/onethink/index.php?s=/admin/category/edit.html') [ RunTime:0.001122s ]
+
+[ 2014-08-17T18:46:44+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/category/edit.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000200s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000989s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000113s ]
+SQL: SHOW COLUMNS FROM `onethink_category` [ RunTime:0.007335s ]
+NOTIC: [8] Undefined index: name X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: meta_title X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: keywords X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: meta_title X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: type X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: reply_model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] json_encode() expects at least 1 parameter, 0 given X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 934 行.
+NOTIC: [8] Undefined index: extend X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+SQL: UPDATE `onethink_category` SET `sort`=0,`title`='Php',`update_time`=1408272404,`status`=1 WHERE ( `id` = 44 ) [ RunTime:0.002289s ]
+NOTIC: [2] unlink(./Runtime/Temp/cbc58bd3cdec352c980d0ad729b5c219.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory X:\www\onethink\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+SQL: SHOW COLUMNS FROM `onethink_action` [ RunTime:0.009800s ]
+SQL: SELECT * FROM `onethink_action` WHERE ( `name` = 'update_category' ) LIMIT 1   [ RunTime:0.002116s ]
+SQL: SHOW COLUMNS FROM `onethink_action_log` [ RunTime:0.006278s ]
+SQL: INSERT INTO `onethink_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES (11,1,2130706433,'category',44,1408272404,'操作url：/onethink/index.php?s=/admin/category/edit.html') [ RunTime:0.002845s ]
+
+[ 2014-08-17T18:46:46+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/category/edit.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000120s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000646s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000079s ]
+SQL: SHOW COLUMNS FROM `onethink_category` [ RunTime:0.005837s ]
+NOTIC: [8] Undefined index: name X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: meta_title X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: keywords X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: meta_title X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: type X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: reply_model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] json_encode() expects at least 1 parameter, 0 given X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 934 行.
+NOTIC: [8] Undefined index: extend X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+SQL: UPDATE `onethink_category` SET `sort`=1,`title`='C',`update_time`=1408272406,`status`=1 WHERE ( `id` = 40 ) [ RunTime:0.002294s ]
+NOTIC: [2] unlink(./Runtime/Temp/cbc58bd3cdec352c980d0ad729b5c219.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory X:\www\onethink\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+SQL: SHOW COLUMNS FROM `onethink_action` [ RunTime:0.005843s ]
+SQL: SELECT * FROM `onethink_action` WHERE ( `name` = 'update_category' ) LIMIT 1   [ RunTime:0.002043s ]
+SQL: SHOW COLUMNS FROM `onethink_action_log` [ RunTime:0.007796s ]
+SQL: INSERT INTO `onethink_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES (11,1,2130706433,'category',40,1408272406,'操作url：/onethink/index.php?s=/admin/category/edit.html') [ RunTime:0.001507s ]
+
+[ 2014-08-17T18:54:09+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/category/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000126s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000893s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000175s ]
+SQL: SHOW COLUMNS FROM `onethink_category` [ RunTime:0.007339s ]
+SQL: SELECT * FROM `onethink_category` WHERE ( `name` = 'about_me' ) LIMIT 1   [ RunTime:0.001823s ]
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: reply_model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] json_encode() expects at least 1 parameter, 0 given X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 934 行.
+NOTIC: [8] Undefined index: extend X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+SQL: INSERT INTO `onethink_category` (`title`,`name`,`allow_publish`,`check`,`type`,`display`,`reply`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`id`,`pid`,`create_time`,`update_time`,`status`) VALUES ('About me','about_me',1,0,'2',1,0,0,10,'','','','','','','',0,0,1408272849,1408272849,1) [ RunTime:0.001292s ]
+NOTIC: [2] unlink(./Runtime/Temp/cbc58bd3cdec352c980d0ad729b5c219.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory X:\www\onethink\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+SQL: SHOW COLUMNS FROM `onethink_action` [ RunTime:0.009576s ]
+SQL: SELECT * FROM `onethink_action` WHERE ( `name` = 'update_category' ) LIMIT 1   [ RunTime:0.002203s ]
+SQL: SHOW COLUMNS FROM `onethink_action_log` [ RunTime:0.011220s ]
+SQL: INSERT INTO `onethink_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES (11,1,2130706433,'category',45,1408272849,'操作url：/onethink/index.php?s=/admin/category/add.html') [ RunTime:0.001302s ]
+
+[ 2014-08-17T18:54:30+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/category/edit/id/45/pid/0.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000126s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000617s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000056s ]
+SQL: SHOW COLUMNS FROM `onethink_category` [ RunTime:0.004762s ]
+SQL: SELECT * FROM `onethink_category` WHERE ( `name` = 'about_me' ) AND ( `id` <> '45' ) LIMIT 1   [ RunTime:0.001786s ]
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: reply_model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] json_encode() expects at least 1 parameter, 0 given X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 934 行.
+NOTIC: [8] Undefined index: extend X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+SQL: UPDATE `onethink_category` SET `title`='About me',`name`='about_me',`allow_publish`=1,`check`=0,`model`='2',`type`='2',`display`=1,`reply`=0,`sort`=0,`list_row`=10,`meta_title`='',`keywords`='',`description`='',`template_index`='',`template_lists`='',`template_detail`='',`template_edit`='',`pid`=0,`update_time`=1408272870,`status`=1 WHERE ( `id` = 45 ) [ RunTime:0.001112s ]
+NOTIC: [2] unlink(./Runtime/Temp/cbc58bd3cdec352c980d0ad729b5c219.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory X:\www\onethink\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+SQL: SHOW COLUMNS FROM `onethink_action` [ RunTime:0.005704s ]
+SQL: SELECT * FROM `onethink_action` WHERE ( `name` = 'update_category' ) LIMIT 1   [ RunTime:0.001576s ]
+SQL: SHOW COLUMNS FROM `onethink_action_log` [ RunTime:0.004555s ]
+SQL: INSERT INTO `onethink_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES (11,1,2130706433,'category',45,1408272870,'操作url：/onethink/index.php?s=/admin/category/edit/id/45/pid/0.html') [ RunTime:0.001568s ]
+
+[ 2014-08-17T18:54:58+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/category/remove/id/45.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000121s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000726s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000087s ]
+SQL: SHOW COLUMNS FROM `onethink_category` [ RunTime:0.007077s ]
+SQL: SELECT `id` FROM `onethink_category` WHERE ( `pid` = 45 )  [ RunTime:0.001351s ]
+SQL: SHOW COLUMNS FROM `onethink_document` [ RunTime:0.005374s ]
+SQL: SELECT `id` FROM `onethink_document` WHERE ( `category_id` = 45 )  [ RunTime:0.001415s ]
+SQL: DELETE FROM `onethink_category` WHERE ( `id` = 45 ) [ RunTime:0.001180s ]
+SQL: SHOW COLUMNS FROM `onethink_action` [ RunTime:0.004803s ]
+SQL: SELECT * FROM `onethink_action` WHERE ( `name` = 'update_category' ) LIMIT 1   [ RunTime:0.001222s ]
+SQL: SHOW COLUMNS FROM `onethink_action_log` [ RunTime:0.004754s ]
+SQL: INSERT INTO `onethink_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES (11,1,2130706433,'category',45,1408272898,'操作url：/onethink/index.php?s=/admin/category/remove/id/45.html') [ RunTime:0.001105s ]
+
+[ 2014-08-17T18:55:23+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/category/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000118s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000738s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000055s ]
+SQL: SHOW COLUMNS FROM `onethink_category` [ RunTime:0.004857s ]
+SQL: SELECT * FROM `onethink_category` WHERE ( `name` = 'about_me' ) LIMIT 1   [ RunTime:0.001110s ]
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: reply_model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] json_encode() expects at least 1 parameter, 0 given X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 934 行.
+NOTIC: [8] Undefined index: extend X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+SQL: INSERT INTO `onethink_category` (`title`,`name`,`allow_publish`,`check`,`model`,`type`,`display`,`reply`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`id`,`pid`,`create_time`,`update_time`,`status`) VALUES ('About me','about_me',1,0,'2','2',1,0,0,10,'','','','','','','',0,0,1408272923,1408272923,1) [ RunTime:0.000540s ]
+NOTIC: [2] unlink(./Runtime/Temp/cbc58bd3cdec352c980d0ad729b5c219.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory X:\www\onethink\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+SQL: SHOW COLUMNS FROM `onethink_action` [ RunTime:0.004818s ]
+SQL: SELECT * FROM `onethink_action` WHERE ( `name` = 'update_category' ) LIMIT 1   [ RunTime:0.000742s ]
+SQL: SHOW COLUMNS FROM `onethink_action_log` [ RunTime:0.004357s ]
+SQL: INSERT INTO `onethink_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES (11,1,2130706433,'category',46,1408272923,'操作url：/onethink/index.php?s=/admin/category/add.html') [ RunTime:0.000420s ]
+
+[ 2014-08-17T18:55:29+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/category/remove/id/46.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000123s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000630s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000123s ]
+SQL: SHOW COLUMNS FROM `onethink_category` [ RunTime:0.005674s ]
+SQL: SELECT `id` FROM `onethink_category` WHERE ( `pid` = 46 )  [ RunTime:0.000980s ]
+SQL: SHOW COLUMNS FROM `onethink_document` [ RunTime:0.004952s ]
+SQL: SELECT `id` FROM `onethink_document` WHERE ( `category_id` = 46 )  [ RunTime:0.001123s ]
+SQL: DELETE FROM `onethink_category` WHERE ( `id` = 46 ) [ RunTime:0.000754s ]
+SQL: SHOW COLUMNS FROM `onethink_action` [ RunTime:0.004430s ]
+SQL: SELECT * FROM `onethink_action` WHERE ( `name` = 'update_category' ) LIMIT 1   [ RunTime:0.000843s ]
+SQL: SHOW COLUMNS FROM `onethink_action_log` [ RunTime:0.004636s ]
+SQL: INSERT INTO `onethink_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES (11,1,2130706433,'category',46,1408272929,'操作url：/onethink/index.php?s=/admin/category/remove/id/46.html') [ RunTime:0.001301s ]
+
+[ 2014-08-17T18:55:48+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/category/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000114s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000609s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000067s ]
+SQL: SHOW COLUMNS FROM `onethink_category` [ RunTime:0.005972s ]
+SQL: SELECT * FROM `onethink_category` WHERE ( `name` = 'about_me' ) LIMIT 1   [ RunTime:0.000869s ]
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: reply_model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] json_encode() expects at least 1 parameter, 0 given X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 934 行.
+NOTIC: [8] Undefined index: extend X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+SQL: INSERT INTO `onethink_category` (`title`,`name`,`allow_publish`,`check`,`type`,`display`,`reply`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`id`,`pid`,`create_time`,`update_time`,`status`) VALUES ('About me','about_me',1,0,'2,1',1,0,0,10,'','','','','','','',0,0,1408272948,1408272948,1) [ RunTime:0.000967s ]
+NOTIC: [2] unlink(./Runtime/Temp/cbc58bd3cdec352c980d0ad729b5c219.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory X:\www\onethink\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+SQL: SHOW COLUMNS FROM `onethink_action` [ RunTime:0.004376s ]
+SQL: SELECT * FROM `onethink_action` WHERE ( `name` = 'update_category' ) LIMIT 1   [ RunTime:0.000858s ]
+SQL: SHOW COLUMNS FROM `onethink_action_log` [ RunTime:0.004844s ]
+SQL: INSERT INTO `onethink_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES (11,1,2130706433,'category',47,1408272948,'操作url：/onethink/index.php?s=/admin/category/add.html') [ RunTime:0.000687s ]
+
+[ 2014-08-17T18:56:20+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/category/edit/id/47/pid/0.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000116s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000580s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000053s ]
+SQL: SHOW COLUMNS FROM `onethink_category` [ RunTime:0.005455s ]
+SQL: SELECT * FROM `onethink_category` WHERE ( `name` = 'about_me' ) AND ( `id` <> '47' ) LIMIT 1   [ RunTime:0.001130s ]
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: reply_model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] json_encode() expects at least 1 parameter, 0 given X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 934 行.
+NOTIC: [8] Undefined index: extend X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+SQL: UPDATE `onethink_category` SET `title`='About me',`name`='about_me',`allow_publish`=1,`check`=0,`model`='2',`type`='2,1',`display`=1,`reply`=0,`sort`=0,`list_row`=10,`meta_title`='',`keywords`='',`description`='',`template_index`='',`template_lists`='',`template_detail`='',`template_edit`='',`pid`=0,`update_time`=1408272980,`status`=1 WHERE ( `id` = 47 ) [ RunTime:0.000650s ]
+NOTIC: [2] unlink(./Runtime/Temp/cbc58bd3cdec352c980d0ad729b5c219.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory X:\www\onethink\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+SQL: SHOW COLUMNS FROM `onethink_action` [ RunTime:0.004368s ]
+SQL: SELECT * FROM `onethink_action` WHERE ( `name` = 'update_category' ) LIMIT 1   [ RunTime:0.000639s ]
+SQL: SHOW COLUMNS FROM `onethink_action_log` [ RunTime:0.004362s ]
+SQL: INSERT INTO `onethink_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES (11,1,2130706433,'category',47,1408272980,'操作url：/onethink/index.php?s=/admin/category/edit/id/47/pid/0.html') [ RunTime:0.000808s ]
+
+[ 2014-08-17T18:57:04+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/channel/add/pid/0.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000243s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001469s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000134s ]
+SQL: SHOW COLUMNS FROM `onethink_channel` [ RunTime:0.010712s ]
+SQL: INSERT INTO `onethink_channel` (`pid`,`title`,`url`,`sort`,`id`,`create_time`,`update_time`,`status`) VALUES (0,'About me','Article/index?category=about_me',0,0,1408273024,1408273024,1) [ RunTime:0.002587s ]
+
+[ 2014-08-17T18:57:34+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/category/remove/id/47.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000114s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000573s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000057s ]
+SQL: SHOW COLUMNS FROM `onethink_category` [ RunTime:0.005862s ]
+SQL: SELECT `id` FROM `onethink_category` WHERE ( `pid` = 47 )  [ RunTime:0.001273s ]
+SQL: SHOW COLUMNS FROM `onethink_document` [ RunTime:0.004751s ]
+SQL: SELECT `id` FROM `onethink_document` WHERE ( `category_id` = 47 )  [ RunTime:0.001189s ]
+SQL: DELETE FROM `onethink_category` WHERE ( `id` = 47 ) [ RunTime:0.000796s ]
+SQL: SHOW COLUMNS FROM `onethink_action` [ RunTime:0.004932s ]
+SQL: SELECT * FROM `onethink_action` WHERE ( `name` = 'update_category' ) LIMIT 1   [ RunTime:0.001277s ]
+SQL: SHOW COLUMNS FROM `onethink_action_log` [ RunTime:0.004240s ]
+SQL: INSERT INTO `onethink_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES (11,1,2130706433,'category',47,1408273054,'操作url：/onethink/index.php?s=/admin/category/remove/id/47.html') [ RunTime:0.001120s ]
+
+[ 2014-08-17T19:01:00+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/category/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000120s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000747s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000226s ]
+SQL: SHOW COLUMNS FROM `onethink_category` [ RunTime:0.007941s ]
+SQL: SELECT * FROM `onethink_category` WHERE ( `name` = 'blog_go' ) LIMIT 1   [ RunTime:0.001004s ]
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: reply_model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] json_encode() expects at least 1 parameter, 0 given X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 934 行.
+NOTIC: [8] Undefined index: extend X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+SQL: INSERT INTO `onethink_category` (`title`,`name`,`allow_publish`,`check`,`type`,`display`,`reply`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`id`,`pid`,`create_time`,`update_time`,`status`) VALUES ('go','blog_go',1,0,'2',1,0,0,10,'','','','','','','',0,0,1408273259,1408273259,1) [ RunTime:0.000547s ]
+NOTIC: [2] unlink(./Runtime/Temp/cbc58bd3cdec352c980d0ad729b5c219.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory X:\www\onethink\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+SQL: SHOW COLUMNS FROM `onethink_action` [ RunTime:0.007563s ]
+SQL: SELECT * FROM `onethink_action` WHERE ( `name` = 'update_category' ) LIMIT 1   [ RunTime:0.001025s ]
+SQL: SHOW COLUMNS FROM `onethink_action_log` [ RunTime:0.005601s ]
+SQL: INSERT INTO `onethink_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES (11,1,2130706433,'category',48,1408273259,'操作url：/onethink/index.php?s=/admin/category/add.html') [ RunTime:0.001621s ]
+
+[ 2014-08-17T19:01:32+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/category/remove/id/48.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000122s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000747s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000345s ]
+SQL: SHOW COLUMNS FROM `onethink_category` [ RunTime:0.004787s ]
+SQL: SELECT `id` FROM `onethink_category` WHERE ( `pid` = 48 )  [ RunTime:0.000777s ]
+SQL: SHOW COLUMNS FROM `onethink_document` [ RunTime:0.006602s ]
+SQL: SELECT `id` FROM `onethink_document` WHERE ( `category_id` = 48 )  [ RunTime:0.000672s ]
+SQL: DELETE FROM `onethink_category` WHERE ( `id` = 48 ) [ RunTime:0.000496s ]
+SQL: SHOW COLUMNS FROM `onethink_action` [ RunTime:0.004289s ]
+SQL: SELECT * FROM `onethink_action` WHERE ( `name` = 'update_category' ) LIMIT 1   [ RunTime:0.000857s ]
+SQL: SHOW COLUMNS FROM `onethink_action_log` [ RunTime:0.006625s ]
+SQL: INSERT INTO `onethink_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES (11,1,2130706433,'category',48,1408273292,'操作url：/onethink/index.php?s=/admin/category/remove/id/48.html') [ RunTime:0.000545s ]
+
+[ 2014-08-17T19:02:47+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/category/add/pid/1.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000267s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001076s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000083s ]
+SQL: SHOW COLUMNS FROM `onethink_category` [ RunTime:0.005509s ]
+SQL: SELECT * FROM `onethink_category` WHERE ( `name` = 'blog_go' ) LIMIT 1   [ RunTime:0.002110s ]
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: reply_model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] json_encode() expects at least 1 parameter, 0 given X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 934 行.
+NOTIC: [8] Undefined index: extend X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+SQL: INSERT INTO `onethink_category` (`title`,`name`,`allow_publish`,`check`,`type`,`display`,`reply`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`id`,`pid`,`create_time`,`update_time`,`status`) VALUES ('go','blog_go',1,0,'2',1,0,0,10,'','','','','','','',0,1,1408273367,1408273367,1) [ RunTime:0.000832s ]
+NOTIC: [2] unlink(./Runtime/Temp/cbc58bd3cdec352c980d0ad729b5c219.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory X:\www\onethink\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+SQL: SHOW COLUMNS FROM `onethink_action` [ RunTime:0.004866s ]
+SQL: SELECT * FROM `onethink_action` WHERE ( `name` = 'update_category' ) LIMIT 1   [ RunTime:0.000735s ]
+SQL: SHOW COLUMNS FROM `onethink_action_log` [ RunTime:0.006076s ]
+SQL: INSERT INTO `onethink_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES (11,1,2130706433,'category',49,1408273367,'操作url：/onethink/index.php?s=/admin/category/add/pid/1.html') [ RunTime:0.000436s ]
+
+[ 2014-08-17T19:03:39+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/category/edit.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000233s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001429s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000076s ]
+SQL: SHOW COLUMNS FROM `onethink_category` [ RunTime:0.006833s ]
+NOTIC: [8] Undefined index: name X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: meta_title X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: keywords X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: meta_title X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: type X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: reply_model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] json_encode() expects at least 1 parameter, 0 given X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 934 行.
+NOTIC: [8] Undefined index: extend X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+SQL: UPDATE `onethink_category` SET `sort`=22,`title`='C',`update_time`=1408273419,`status`=1 WHERE ( `id` = 40 ) [ RunTime:0.002421s ]
+NOTIC: [2] unlink(./Runtime/Temp/cbc58bd3cdec352c980d0ad729b5c219.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory X:\www\onethink\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+SQL: SHOW COLUMNS FROM `onethink_action` [ RunTime:0.006606s ]
+SQL: SELECT * FROM `onethink_action` WHERE ( `name` = 'update_category' ) LIMIT 1   [ RunTime:0.001536s ]
+SQL: SHOW COLUMNS FROM `onethink_action_log` [ RunTime:0.005265s ]
+SQL: INSERT INTO `onethink_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES (11,1,2130706433,'category',40,1408273419,'操作url：/onethink/index.php?s=/admin/category/edit.html') [ RunTime:0.002145s ]
+
+[ 2014-08-17T19:03:43+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/category/edit.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000117s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000542s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000076s ]
+SQL: SHOW COLUMNS FROM `onethink_category` [ RunTime:0.008025s ]
+NOTIC: [8] Undefined index: name X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: meta_title X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: keywords X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: meta_title X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: type X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: reply_model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] json_encode() expects at least 1 parameter, 0 given X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 934 行.
+NOTIC: [8] Undefined index: extend X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+SQL: UPDATE `onethink_category` SET `sort`=22,`title`='Linux',`update_time`=1408273423,`status`=1 WHERE ( `id` = 2 ) [ RunTime:0.002459s ]
+NOTIC: [2] unlink(./Runtime/Temp/cbc58bd3cdec352c980d0ad729b5c219.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory X:\www\onethink\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+SQL: SHOW COLUMNS FROM `onethink_action` [ RunTime:0.005781s ]
+SQL: SELECT * FROM `onethink_action` WHERE ( `name` = 'update_category' ) LIMIT 1   [ RunTime:0.002294s ]
+SQL: SHOW COLUMNS FROM `onethink_action_log` [ RunTime:0.007259s ]
+SQL: INSERT INTO `onethink_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES (11,1,2130706433,'category',2,1408273423,'操作url：/onethink/index.php?s=/admin/category/edit.html') [ RunTime:0.000986s ]
+
+[ 2014-08-17T19:03:52+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/category/edit.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000119s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000637s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000100s ]
+SQL: SHOW COLUMNS FROM `onethink_category` [ RunTime:0.004806s ]
+NOTIC: [8] Undefined index: name X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: meta_title X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: keywords X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: meta_title X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: type X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: reply_model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] json_encode() expects at least 1 parameter, 0 given X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 934 行.
+NOTIC: [8] Undefined index: extend X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+SQL: UPDATE `onethink_category` SET `sort`=21,`title`='C',`update_time`=1408273432,`status`=1 WHERE ( `id` = 40 ) [ RunTime:0.002290s ]
+NOTIC: [2] unlink(./Runtime/Temp/cbc58bd3cdec352c980d0ad729b5c219.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory X:\www\onethink\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+SQL: SHOW COLUMNS FROM `onethink_action` [ RunTime:0.006392s ]
+SQL: SELECT * FROM `onethink_action` WHERE ( `name` = 'update_category' ) LIMIT 1   [ RunTime:0.001777s ]
+SQL: SHOW COLUMNS FROM `onethink_action_log` [ RunTime:0.005185s ]
+SQL: INSERT INTO `onethink_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES (11,1,2130706433,'category',40,1408273432,'操作url：/onethink/index.php?s=/admin/category/edit.html') [ RunTime:0.002452s ]
+
+[ 2014-08-17T19:03:56+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/category/edit.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000120s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000615s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000089s ]
+SQL: SHOW COLUMNS FROM `onethink_category` [ RunTime:0.007277s ]
+NOTIC: [8] Undefined index: name X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: meta_title X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: keywords X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: meta_title X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: type X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: reply_model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] json_encode() expects at least 1 parameter, 0 given X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 934 行.
+NOTIC: [8] Undefined index: extend X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+SQL: UPDATE `onethink_category` SET `sort`=19,`title`='Databases',`update_time`=1408273436,`status`=1 WHERE ( `id` = 43 ) [ RunTime:0.002053s ]
+NOTIC: [2] unlink(./Runtime/Temp/cbc58bd3cdec352c980d0ad729b5c219.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory X:\www\onethink\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+SQL: SHOW COLUMNS FROM `onethink_action` [ RunTime:0.006688s ]
+SQL: SELECT * FROM `onethink_action` WHERE ( `name` = 'update_category' ) LIMIT 1   [ RunTime:0.001262s ]
+SQL: SHOW COLUMNS FROM `onethink_action_log` [ RunTime:0.005137s ]
+SQL: INSERT INTO `onethink_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES (11,1,2130706433,'category',43,1408273436,'操作url：/onethink/index.php?s=/admin/category/edit.html') [ RunTime:0.001553s ]
+
+[ 2014-08-17T19:04:00+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/category/edit.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000127s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000821s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000091s ]
+SQL: SHOW COLUMNS FROM `onethink_category` [ RunTime:0.007969s ]
+NOTIC: [8] Undefined index: name X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: meta_title X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: keywords X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: meta_title X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: type X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: reply_model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] json_encode() expects at least 1 parameter, 0 given X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 934 行.
+NOTIC: [8] Undefined index: extend X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+SQL: UPDATE `onethink_category` SET `sort`=18,`title`='Web',`update_time`=1408273440,`status`=1 WHERE ( `id` = 41 ) [ RunTime:0.001011s ]
+NOTIC: [2] unlink(./Runtime/Temp/cbc58bd3cdec352c980d0ad729b5c219.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory X:\www\onethink\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+SQL: SHOW COLUMNS FROM `onethink_action` [ RunTime:0.007434s ]
+SQL: SELECT * FROM `onethink_action` WHERE ( `name` = 'update_category' ) LIMIT 1   [ RunTime:0.000891s ]
+SQL: SHOW COLUMNS FROM `onethink_action_log` [ RunTime:0.005304s ]
+SQL: INSERT INTO `onethink_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES (11,1,2130706433,'category',41,1408273440,'操作url：/onethink/index.php?s=/admin/category/edit.html') [ RunTime:0.000887s ]
+
+[ 2014-08-17T19:04:10+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/category/edit.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000252s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001208s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000107s ]
+SQL: SHOW COLUMNS FROM `onethink_category` [ RunTime:0.008366s ]
+NOTIC: [8] Undefined index: name X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: meta_title X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: keywords X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: meta_title X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: type X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: reply_model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] json_encode() expects at least 1 parameter, 0 given X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 934 行.
+NOTIC: [8] Undefined index: extend X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+SQL: UPDATE `onethink_category` SET `sort`=17,`title`='Javascript',`update_time`=1408273450,`status`=1 WHERE ( `id` = 42 ) [ RunTime:0.002722s ]
+NOTIC: [2] unlink(./Runtime/Temp/cbc58bd3cdec352c980d0ad729b5c219.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory X:\www\onethink\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+SQL: SHOW COLUMNS FROM `onethink_action` [ RunTime:0.009563s ]
+SQL: SELECT * FROM `onethink_action` WHERE ( `name` = 'update_category' ) LIMIT 1   [ RunTime:0.002256s ]
+SQL: SHOW COLUMNS FROM `onethink_action_log` [ RunTime:0.010230s ]
+SQL: INSERT INTO `onethink_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES (11,1,2130706433,'category',42,1408273450,'操作url：/onethink/index.php?s=/admin/category/edit.html') [ RunTime:0.002384s ]
+
+[ 2014-08-17T19:04:13+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/category/edit.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000122s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000723s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000083s ]
+SQL: SHOW COLUMNS FROM `onethink_category` [ RunTime:0.008245s ]
+NOTIC: [8] Undefined index: name X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: meta_title X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: keywords X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: meta_title X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: type X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: reply_model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] json_encode() expects at least 1 parameter, 0 given X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 934 行.
+NOTIC: [8] Undefined index: extend X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+SQL: UPDATE `onethink_category` SET `sort`=16,`title`='Php',`update_time`=1408273453,`status`=1 WHERE ( `id` = 44 ) [ RunTime:0.003199s ]
+NOTIC: [2] unlink(./Runtime/Temp/cbc58bd3cdec352c980d0ad729b5c219.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory X:\www\onethink\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+SQL: SHOW COLUMNS FROM `onethink_action` [ RunTime:0.007376s ]
+SQL: SELECT * FROM `onethink_action` WHERE ( `name` = 'update_category' ) LIMIT 1   [ RunTime:0.002412s ]
+SQL: SHOW COLUMNS FROM `onethink_action_log` [ RunTime:0.007990s ]
+SQL: INSERT INTO `onethink_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES (11,1,2130706433,'category',44,1408273453,'操作url：/onethink/index.php?s=/admin/category/edit.html') [ RunTime:0.002093s ]
+
+[ 2014-08-17T19:04:18+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/category/edit.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000114s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000553s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000086s ]
+SQL: SHOW COLUMNS FROM `onethink_category` [ RunTime:0.004998s ]
+NOTIC: [8] Undefined index: name X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: meta_title X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: keywords X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: meta_title X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: type X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: reply_model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] json_encode() expects at least 1 parameter, 0 given X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 934 行.
+NOTIC: [8] Undefined index: extend X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+SQL: UPDATE `onethink_category` SET `sort`=15,`title`='go',`update_time`=1408273458,`status`=1 WHERE ( `id` = 49 ) [ RunTime:0.001826s ]
+NOTIC: [2] unlink(./Runtime/Temp/cbc58bd3cdec352c980d0ad729b5c219.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory X:\www\onethink\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+SQL: SHOW COLUMNS FROM `onethink_action` [ RunTime:0.005828s ]
+SQL: SELECT * FROM `onethink_action` WHERE ( `name` = 'update_category' ) LIMIT 1   [ RunTime:0.001749s ]
+SQL: SHOW COLUMNS FROM `onethink_action_log` [ RunTime:0.004955s ]
+SQL: INSERT INTO `onethink_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES (11,1,2130706433,'category',49,1408273458,'操作url：/onethink/index.php?s=/admin/category/edit.html') [ RunTime:0.000882s ]
+
+[ 2014-08-17T19:05:50+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/category/edit.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000143s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000894s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000086s ]
+SQL: SHOW COLUMNS FROM `onethink_category` [ RunTime:0.005690s ]
+NOTIC: [8] Undefined index: name X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: meta_title X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: keywords X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: meta_title X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: type X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: reply_model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] json_encode() expects at least 1 parameter, 0 given X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 934 行.
+NOTIC: [8] Undefined index: extend X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+SQL: UPDATE `onethink_category` SET `sort`=0,`title`='Linux',`update_time`=1408273550,`status`=1 WHERE ( `id` = 2 ) [ RunTime:0.001057s ]
+NOTIC: [2] unlink(./Runtime/Temp/cbc58bd3cdec352c980d0ad729b5c219.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory X:\www\onethink\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+SQL: SHOW COLUMNS FROM `onethink_action` [ RunTime:0.007479s ]
+SQL: SELECT * FROM `onethink_action` WHERE ( `name` = 'update_category' ) LIMIT 1   [ RunTime:0.000708s ]
+SQL: SHOW COLUMNS FROM `onethink_action_log` [ RunTime:0.004635s ]
+SQL: INSERT INTO `onethink_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES (11,1,2130706433,'category',2,1408273550,'操作url：/onethink/index.php?s=/admin/category/edit.html') [ RunTime:0.001015s ]
+
+[ 2014-08-17T19:05:54+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/category/edit.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000144s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000949s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000076s ]
+SQL: SHOW COLUMNS FROM `onethink_category` [ RunTime:0.006309s ]
+NOTIC: [8] Undefined index: name X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: meta_title X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: keywords X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: meta_title X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: type X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: reply_model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] json_encode() expects at least 1 parameter, 0 given X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 934 行.
+NOTIC: [8] Undefined index: extend X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+SQL: UPDATE `onethink_category` SET `sort`=1,`title`='C',`update_time`=1408273554,`status`=1 WHERE ( `id` = 40 ) [ RunTime:0.001280s ]
+NOTIC: [2] unlink(./Runtime/Temp/cbc58bd3cdec352c980d0ad729b5c219.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory X:\www\onethink\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+SQL: SHOW COLUMNS FROM `onethink_action` [ RunTime:0.005678s ]
+SQL: SELECT * FROM `onethink_action` WHERE ( `name` = 'update_category' ) LIMIT 1   [ RunTime:0.000773s ]
+SQL: SHOW COLUMNS FROM `onethink_action_log` [ RunTime:0.007925s ]
+SQL: INSERT INTO `onethink_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES (11,1,2130706433,'category',40,1408273554,'操作url：/onethink/index.php?s=/admin/category/edit.html') [ RunTime:0.001040s ]
+
+[ 2014-08-17T19:06:57+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/category/edit.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000137s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000721s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000089s ]
+SQL: SHOW COLUMNS FROM `onethink_category` [ RunTime:0.006392s ]
+NOTIC: [8] Undefined index: name X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: meta_title X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: keywords X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: meta_title X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: type X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: reply_model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] json_encode() expects at least 1 parameter, 0 given X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 934 行.
+NOTIC: [8] Undefined index: extend X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+SQL: UPDATE `onethink_category` SET `sort`=2,`title`='Databases',`update_time`=1408273617,`status`=1 WHERE ( `id` = 43 ) [ RunTime:0.001091s ]
+NOTIC: [2] unlink(./Runtime/Temp/cbc58bd3cdec352c980d0ad729b5c219.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory X:\www\onethink\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+SQL: SHOW COLUMNS FROM `onethink_action` [ RunTime:0.006707s ]
+SQL: SELECT * FROM `onethink_action` WHERE ( `name` = 'update_category' ) LIMIT 1   [ RunTime:0.000953s ]
+SQL: SHOW COLUMNS FROM `onethink_action_log` [ RunTime:0.006059s ]
+SQL: INSERT INTO `onethink_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES (11,1,2130706433,'category',43,1408273617,'操作url：/onethink/index.php?s=/admin/category/edit.html') [ RunTime:0.000602s ]
+
+[ 2014-08-17T19:07:00+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/category/edit.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000134s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000661s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000166s ]
+SQL: SHOW COLUMNS FROM `onethink_category` [ RunTime:0.005612s ]
+NOTIC: [8] Undefined index: name X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: meta_title X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: keywords X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: meta_title X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: type X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: reply_model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] json_encode() expects at least 1 parameter, 0 given X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 934 行.
+NOTIC: [8] Undefined index: extend X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+SQL: UPDATE `onethink_category` SET `sort`=3,`title`='Web',`update_time`=1408273620,`status`=1 WHERE ( `id` = 41 ) [ RunTime:0.003457s ]
+NOTIC: [2] unlink(./Runtime/Temp/cbc58bd3cdec352c980d0ad729b5c219.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory X:\www\onethink\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+SQL: SHOW COLUMNS FROM `onethink_action` [ RunTime:0.005463s ]
+SQL: SELECT * FROM `onethink_action` WHERE ( `name` = 'update_category' ) LIMIT 1   [ RunTime:0.001255s ]
+SQL: SHOW COLUMNS FROM `onethink_action_log` [ RunTime:0.008114s ]
+SQL: INSERT INTO `onethink_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES (11,1,2130706433,'category',41,1408273620,'操作url：/onethink/index.php?s=/admin/category/edit.html') [ RunTime:0.000866s ]
+
+[ 2014-08-17T19:07:12+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/category/edit.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000137s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000726s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000090s ]
+SQL: SHOW COLUMNS FROM `onethink_category` [ RunTime:0.007207s ]
+NOTIC: [8] Undefined index: name X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: meta_title X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: keywords X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: meta_title X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: type X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: reply_model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] json_encode() expects at least 1 parameter, 0 given X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 934 行.
+NOTIC: [8] Undefined index: extend X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+SQL: UPDATE `onethink_category` SET `sort`=4,`title`='Javascript',`update_time`=1408273631,`status`=1 WHERE ( `id` = 42 ) [ RunTime:0.001997s ]
+NOTIC: [2] unlink(./Runtime/Temp/cbc58bd3cdec352c980d0ad729b5c219.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory X:\www\onethink\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+SQL: SHOW COLUMNS FROM `onethink_action` [ RunTime:0.006947s ]
+SQL: SELECT * FROM `onethink_action` WHERE ( `name` = 'update_category' ) LIMIT 1   [ RunTime:0.001146s ]
+SQL: SHOW COLUMNS FROM `onethink_action_log` [ RunTime:0.009686s ]
+SQL: INSERT INTO `onethink_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES (11,1,2130706433,'category',42,1408273631,'操作url：/onethink/index.php?s=/admin/category/edit.html') [ RunTime:0.001877s ]
+
+[ 2014-08-17T19:07:14+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/category/edit.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000149s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002585s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000104s ]
+SQL: SHOW COLUMNS FROM `onethink_category` [ RunTime:0.006608s ]
+NOTIC: [8] Undefined index: name X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: meta_title X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: keywords X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: meta_title X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: type X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: reply_model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] json_encode() expects at least 1 parameter, 0 given X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 934 行.
+NOTIC: [8] Undefined index: extend X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+SQL: UPDATE `onethink_category` SET `sort`=5,`title`='Php',`update_time`=1408273634,`status`=1 WHERE ( `id` = 44 ) [ RunTime:0.002452s ]
+NOTIC: [2] unlink(./Runtime/Temp/cbc58bd3cdec352c980d0ad729b5c219.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory X:\www\onethink\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+SQL: SHOW COLUMNS FROM `onethink_action` [ RunTime:0.007079s ]
+SQL: SELECT * FROM `onethink_action` WHERE ( `name` = 'update_category' ) LIMIT 1   [ RunTime:0.001354s ]
+SQL: SHOW COLUMNS FROM `onethink_action_log` [ RunTime:0.007936s ]
+SQL: INSERT INTO `onethink_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES (11,1,2130706433,'category',44,1408273634,'操作url：/onethink/index.php?s=/admin/category/edit.html') [ RunTime:0.002152s ]
+
+[ 2014-08-17T19:07:16+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/category/edit.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000133s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000629s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000103s ]
+SQL: SHOW COLUMNS FROM `onethink_category` [ RunTime:0.006427s ]
+NOTIC: [8] Undefined index: name X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: meta_title X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: keywords X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: meta_title X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: type X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: reply_model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] json_encode() expects at least 1 parameter, 0 given X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 934 行.
+NOTIC: [8] Undefined index: extend X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+SQL: UPDATE `onethink_category` SET `sort`=6,`title`='go',`update_time`=1408273636,`status`=1 WHERE ( `id` = 49 ) [ RunTime:0.001065s ]
+NOTIC: [2] unlink(./Runtime/Temp/cbc58bd3cdec352c980d0ad729b5c219.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory X:\www\onethink\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+SQL: SHOW COLUMNS FROM `onethink_action` [ RunTime:0.004438s ]
+SQL: SELECT * FROM `onethink_action` WHERE ( `name` = 'update_category' ) LIMIT 1   [ RunTime:0.002266s ]
+SQL: SHOW COLUMNS FROM `onethink_action_log` [ RunTime:0.006503s ]
+SQL: INSERT INTO `onethink_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES (11,1,2130706433,'category',49,1408273636,'操作url：/onethink/index.php?s=/admin/category/edit.html') [ RunTime:0.001338s ]
+
+[ 2014-08-17T19:15:11+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/article/autosave.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000149s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000588s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000075s ]
+SQL: SHOW COLUMNS FROM `onethink_document` [ RunTime:0.004597s ]
+SQL: SELECT * FROM `onethink_document` WHERE ( `name` = 'vim_b' ) LIMIT 1   [ RunTime:0.000842s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given X:\www\onethink\Application\Admin\Model\DocumentModel.class.php 第 330 行.
+SQL: INSERT INTO `onethink_document` (`title`,`name`,`description`,`link_id`,`type`,`attach`,`view`,`comment`,`level`,`display`,`create_time`,`cover_id`,`id`,`pid`,`model_id`,`category_id`,`uid`,`root`,`extend`,`update_time`,`status`,`position`) VALUES ('vim基础命令','vim_b','',0,2,0,0,0,0,0,1408274111,0,0,0,2,2,1,0,0,1408274111,3,0) [ RunTime:0.001066s ]
+SQL: SHOW COLUMNS FROM `onethink_document_article` [ RunTime:0.007202s ]
+SQL: INSERT INTO `onethink_document_article` (`content`,`parse`,`template`,`bookmark`,`id`) VALUES ('1.ESC和i键切换普通模式和编辑模式 \r\n\r\n2。x → 删当前光标所在的一个字符。 \r\n \r\n3。:wq → 存盘 + 退出 (:w 存盘, :q 退出)  \r\n \r\n4。dd → 删除当前行，并把删除的行存到剪贴板里 \r\n \r\n5。p/P → 粘贴剪贴板 \r\n \r\n6。方向键进行光标移动 ←↓↑→ \r\n \r\n7。yy → 拷贝当前行当行于 ddP \r\n \r\n8。:q! → 退出不保存 :qa! 强行退出所有的正在编辑的文件，就算别的文件有更改。 ',2,'',0,102) [ RunTime:0.000722s ]
+
+[ 2014-08-17T19:15:29+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/article/update.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000167s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000776s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000143s ]
+SQL: SHOW COLUMNS FROM `onethink_document` [ RunTime:0.012150s ]
+SQL: SELECT `id` FROM `onethink_document` WHERE ( `root` = 0 ) AND ( `name` = 'vim_b' ) AND ( `id` <> '102' ) LIMIT 1   [ RunTime:0.001743s ]
+SQL: SELECT `status` FROM `onethink_document` WHERE ( `id` = 102 ) LIMIT 1   [ RunTime:0.001943s ]
+SQL: UPDATE `onethink_document` SET `title`='vim基础命令',`name`='vim_b',`description`='',`link_id`=0,`type`=2,`attach`=0,`view`=0,`comment`=0,`level`=0,`display`=0,`create_time`=1408274129,`cover_id`=0,`pid`=0,`model_id`=2,`category_id`=2,`root`=0,`update_time`=1408274129,`status`=1,`position`=0 WHERE ( `id` = 102 ) [ RunTime:0.003816s ]
+SQL: SHOW COLUMNS FROM `onethink_document_article` [ RunTime:0.010330s ]
+NOTIC: [8] Undefined variable: id X:\www\onethink\Application\Admin\Model\DocumentModel.class.php 第 177 行.
+SQL: UPDATE `onethink_document_article` SET `content`='1.ESC和i键切换普通模式和编辑模式 \r\n\r\n2。x → 删当前光标所在的一个字符。 \r\n \r\n3。:wq → 存盘 + 退出 (:w 存盘, :q 退出)  \r\n \r\n4。dd → 删除当前行，并把删除的行存到剪贴板里 \r\n \r\n5。p/P → 粘贴剪贴板 \r\n \r\n6。方向键进行光标移动 ←↓↑→ \r\n \r\n7。yy → 拷贝当前行当行于 ddP \r\n \r\n8。:q! → 退出不保存 :qa! 强行退出所有的正在编辑的文件，就算别的文件有更改。',`parse`=2,`template`='',`bookmark`=0 WHERE ( `id` = 102 ) [ RunTime:0.006194s ]
+NOTIC: [8] Undefined variable: id X:\www\onethink\Application\Admin\Model\DocumentModel.class.php 第 186 行.
+
+[ 2014-08-17T19:17:58+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/article/update.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000159s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000975s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000128s ]
+SQL: SHOW COLUMNS FROM `onethink_document` [ RunTime:0.009241s ]
+SQL: SELECT `id` FROM `onethink_document` WHERE ( `root` = 0 ) AND ( `name` = 'vim_b' ) AND ( `id` <> '102' ) LIMIT 1   [ RunTime:0.002115s ]
+SQL: SELECT `status` FROM `onethink_document` WHERE ( `id` = 102 ) LIMIT 1   [ RunTime:0.003962s ]
+SQL: UPDATE `onethink_document` SET `title`='vim基础命令',`name`='vim_b',`description`='',`dateline`=0,`link_id`=0,`type`=2,`attach`=0,`view`=1,`comment`=0,`level`=0,`display`=0,`create_time`=1408274100,`cover_id`=0,`pid`=0,`model_id`=2,`category_id`=2,`root`=0,`update_time`=1408274278,`status`=1,`position`=0 WHERE ( `id` = 102 ) [ RunTime:0.003019s ]
+SQL: SHOW COLUMNS FROM `onethink_document_article` [ RunTime:0.007553s ]
+NOTIC: [8] Undefined variable: id X:\www\onethink\Application\Admin\Model\DocumentModel.class.php 第 177 行.
+SQL: UPDATE `onethink_document_article` SET `content`='1.ESC和i键切换普通模式和编辑模式 <br>\r\n\r\n2.x → 删当前光标所在的一个字符。 \r\n \r\n3.:wq → 存盘 + 退出 (:w 存盘, :q 退出)  \r\n \r\n4.dd → 删除当前行，并把删除的行存到剪贴板里 \r\n \r\n5.p/P → 粘贴剪贴板 \r\n \r\n6.方向键进行光标移动 ←↓↑→ \r\n \r\n7.yy → 拷贝当前行当行于 ddP \r\n \r\n8.:q! → 退出不保存 :qa! 强行退出所有的正在编辑的文件，就算别的文件有更改。',`parse`=2,`template`='',`bookmark`=0 WHERE ( `id` = 102 ) [ RunTime:0.002727s ]
+NOTIC: [8] Undefined variable: id X:\www\onethink\Application\Admin\Model\DocumentModel.class.php 第 186 行.
+
+[ 2014-08-17T19:18:23+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/article/update.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000255s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001960s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000112s ]
+SQL: SHOW COLUMNS FROM `onethink_document` [ RunTime:0.009441s ]
+SQL: SELECT `id` FROM `onethink_document` WHERE ( `root` = 0 ) AND ( `name` = 'vim_b' ) AND ( `id` <> '102' ) LIMIT 1   [ RunTime:0.000805s ]
+SQL: SELECT `status` FROM `onethink_document` WHERE ( `id` = 102 ) LIMIT 1   [ RunTime:0.000704s ]
+SQL: UPDATE `onethink_document` SET `title`='vim基础命令',`name`='vim_b',`description`='',`dateline`=0,`link_id`=0,`type`=2,`attach`=0,`view`=2,`comment`=0,`level`=0,`display`=0,`create_time`=1408274100,`cover_id`=0,`pid`=0,`model_id`=2,`category_id`=2,`root`=0,`update_time`=1408274303,`status`=1,`position`=0 WHERE ( `id` = 102 ) [ RunTime:0.001028s ]
+SQL: SHOW COLUMNS FROM `onethink_document_article` [ RunTime:0.008988s ]
+NOTIC: [8] Undefined variable: id X:\www\onethink\Application\Admin\Model\DocumentModel.class.php 第 177 行.
+SQL: UPDATE `onethink_document_article` SET `content`='1.ESC和i键切换普通模式和编辑模式 <br>\r\n\r\n2.x → 删当前光标所在的一个字符。 <br>\r\n \r\n3.:wq → 存盘 + 退出 (:w 存盘, :q 退出)  <br>\r\n \r\n4.dd → 删除当前行，并把删除的行存到剪贴板里 <br>\r\n \r\n5.p/P → 粘贴剪贴板 <br>\r\n \r\n6.方向键进行光标移动 ←↓↑→ <br>\r\n \r\n7.yy → 拷贝当前行当行于 ddP <br>\r\n \r\n8.:q! → 退出不保存 :qa! 强行退出所有的正在编辑的文件，就算别的文件有更改。<br>',`parse`=2,`template`='',`bookmark`=0 WHERE ( `id` = 102 ) [ RunTime:0.001119s ]
+NOTIC: [8] Undefined variable: id X:\www\onethink\Application\Admin\Model\DocumentModel.class.php 第 186 行.
+
+[ 2014-08-17T19:20:54+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/article/update.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000336s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001554s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000088s ]
+SQL: SHOW COLUMNS FROM `onethink_document` [ RunTime:0.008669s ]
+SQL: SELECT `id` FROM `onethink_document` WHERE ( `root` = 0 ) AND ( `name` = 'vim_b' ) AND ( `id` <> '102' ) LIMIT 1   [ RunTime:0.003084s ]
+SQL: SELECT `status` FROM `onethink_document` WHERE ( `id` = 102 ) LIMIT 1   [ RunTime:0.002089s ]
+SQL: UPDATE `onethink_document` SET `title`='vim基础命令',`name`='vim_b',`description`='',`dateline`=0,`link_id`=0,`type`=2,`attach`=0,`view`=7,`comment`=0,`level`=0,`display`=0,`create_time`=1408274100,`cover_id`=0,`pid`=0,`model_id`=2,`category_id`=2,`root`=0,`update_time`=1408274454,`status`=1,`position`=0 WHERE ( `id` = 102 ) [ RunTime:0.002097s ]
+SQL: SHOW COLUMNS FROM `onethink_document_article` [ RunTime:0.011862s ]
+NOTIC: [8] Undefined variable: id X:\www\onethink\Application\Admin\Model\DocumentModel.class.php 第 177 行.
+SQL: UPDATE `onethink_document_article` SET `content`='1.ESC和i键切换普通模式和编辑模式 <br><br>\r\n\r\n2.x → 删当前光标所在的一个字符。 <br><br>\r\n \r\n3.:wq → 存盘 + 退出 (:w 存盘, :q 退出)  <br><br>\r\n \r\n4.dd → 删除当前行，并把删除的行存到剪贴板里 <br><br>\r\n \r\n5.p/P → 粘贴剪贴板 <br><br>\r\n \r\n6.方向键进行光标移动 ←↓↑→ <br><br>\r\n \r\n7.yy → 拷贝当前行当行于 ddP <br><br>\r\n \r\n8.:q! → 退出不保存 :qa! 强行退出所有的正在编辑的文件，就算别的文件有更改。<br><br>',`parse`=2,`template`='',`bookmark`=0 WHERE ( `id` = 102 ) [ RunTime:0.002267s ]
+NOTIC: [8] Undefined variable: id X:\www\onethink\Application\Admin\Model\DocumentModel.class.php 第 186 行.
+
+[ 2014-08-17T19:23:07+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/category/add/pid/1.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000139s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000709s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000074s ]
+SQL: SHOW COLUMNS FROM `onethink_category` [ RunTime:0.006303s ]
+SQL: SELECT * FROM `onethink_category` WHERE ( `name` = 'blog_some' ) LIMIT 1   [ RunTime:0.003670s ]
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: reply_model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] json_encode() expects at least 1 parameter, 0 given X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 934 行.
+NOTIC: [8] Undefined index: extend X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+SQL: INSERT INTO `onethink_category` (`title`,`name`,`allow_publish`,`check`,`type`,`display`,`reply`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`id`,`pid`,`create_time`,`update_time`,`status`) VALUES ('some','blog_some',1,0,'2',1,0,0,10,'','','','','','','',0,1,1408274587,1408274587,1) [ RunTime:0.001951s ]
+SQL: SHOW COLUMNS FROM `onethink_action` [ RunTime:0.006712s ]
+SQL: SELECT * FROM `onethink_action` WHERE ( `name` = 'update_category' ) LIMIT 1   [ RunTime:0.002292s ]
+SQL: SHOW COLUMNS FROM `onethink_action_log` [ RunTime:0.005880s ]
+SQL: INSERT INTO `onethink_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES (11,1,2130706433,'category',50,1408274587,'操作url：/onethink/index.php?s=/admin/category/add/pid/1.html') [ RunTime:0.002547s ]
+
+[ 2014-08-17T19:23:25+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/category/edit.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000138s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000696s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000061s ]
+SQL: SHOW COLUMNS FROM `onethink_category` [ RunTime:0.008960s ]
+NOTIC: [8] Undefined index: name X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: meta_title X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: keywords X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [8] Undefined index: meta_title X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 993 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: type X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: reply_model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] json_encode() expects at least 1 parameter, 0 given X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 934 行.
+NOTIC: [8] Undefined index: extend X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+SQL: UPDATE `onethink_category` SET `sort`=7,`title`='some',`update_time`=1408274604,`status`=1 WHERE ( `id` = 50 ) [ RunTime:0.003471s ]
+NOTIC: [2] unlink(./Runtime/Temp/cbc58bd3cdec352c980d0ad729b5c219.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory X:\www\onethink\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+SQL: SHOW COLUMNS FROM `onethink_action` [ RunTime:0.007530s ]
+SQL: SELECT * FROM `onethink_action` WHERE ( `name` = 'update_category' ) LIMIT 1   [ RunTime:0.004109s ]
+SQL: SHOW COLUMNS FROM `onethink_action_log` [ RunTime:0.008524s ]
+SQL: INSERT INTO `onethink_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES (11,1,2130706433,'category',50,1408274604,'操作url：/onethink/index.php?s=/admin/category/edit.html') [ RunTime:0.003090s ]
+
+[ 2014-08-17T19:25:54+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/category/edit/id/50/pid/1.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000113s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000674s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000068s ]
+SQL: SHOW COLUMNS FROM `onethink_category` [ RunTime:0.007741s ]
+SQL: SELECT * FROM `onethink_category` WHERE ( `name` = 'blog_some' ) AND ( `id` <> '50' ) LIMIT 1   [ RunTime:0.001994s ]
+NOTIC: [2] Missing argument 1 for arr2str() X:\www\onethink\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed X:\www\onethink\Application\Common\Common\function.php 第 62 行.
+NOTIC: [8] Undefined index: reply_model X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+NOTIC: [2] json_encode() expects at least 1 parameter, 0 given X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 934 行.
+NOTIC: [8] Undefined index: extend X:\www\onethink\ThinkPHP\Library\Think\Model.class.php 第 950 行.
+SQL: UPDATE `onethink_category` SET `title`='some',`name`='blog_some',`allow_publish`=1,`check`=0,`model`='2',`type`='2',`display`=1,`reply`=0,`sort`=7,`list_row`=10,`meta_title`='',`keywords`='',`description`='',`template_index`='',`template_lists`='',`template_detail`='',`template_edit`='',`pid`=1,`update_time`=1408274754,`status`=1 WHERE ( `id` = 50 ) [ RunTime:0.001612s ]
+SQL: SHOW COLUMNS FROM `onethink_action` [ RunTime:0.005456s ]
+SQL: SELECT * FROM `onethink_action` WHERE ( `name` = 'update_category' ) LIMIT 1   [ RunTime:0.001044s ]
+SQL: SHOW COLUMNS FROM `onethink_action_log` [ RunTime:0.004547s ]
+SQL: INSERT INTO `onethink_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES (11,1,2130706433,'category',50,1408274754,'操作url：/onethink/index.php?s=/admin/category/edit/id/50/pid/1.html') [ RunTime:0.000955s ]
+
+[ 2014-08-17T19:27:04+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/article/autosave.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000133s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000596s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000067s ]
+SQL: SHOW COLUMNS FROM `onethink_document` [ RunTime:0.005353s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given X:\www\onethink\Application\Admin\Model\DocumentModel.class.php 第 330 行.
+SQL: INSERT INTO `onethink_document` (`title`,`name`,`description`,`link_id`,`type`,`attach`,`view`,`comment`,`level`,`display`,`create_time`,`cover_id`,`id`,`pid`,`model_id`,`category_id`,`uid`,`root`,`extend`,`update_time`,`status`,`position`) VALUES ('面向过程he','','',0,2,0,0,0,0,0,1408274824,0,0,0,2,50,1,0,0,1408274824,3,0) [ RunTime:0.001566s ]
+SQL: SHOW COLUMNS FROM `onethink_document_article` [ RunTime:0.004799s ]
+SQL: INSERT INTO `onethink_document_article` (`content`,`parse`,`template`,`bookmark`,`id`) VALUES ('面向过程就是分析出解决问题所需要的步骤，然后用函数把这些步骤一步一步实现，使用的时候一个一个依次调用就可以了。 \r\n\r\n面向对象是把构成问题事务分解成各个对象，建立对象的目的不是为了完成一个步骤，而是为了描叙某个事物在整个解决问题的步骤中的行为。\r\n\r\n例如五子棋，面向过程的设计思路就是首先分析问题的步骤：1、开始游戏，2、黑子先走，3、绘制画面，4、判断输赢，5、轮到白子，6、绘制画面，7、判断输赢，8、返回步骤2，9、输出最后结果。把上面每个步骤用分别的函数来实现，问题就解决了。\r\n\r\n而面向对象的设计则是从另外的思路来解决问题。整个五子棋可以分为 1、黑白双方，这两方的行为是一模一样的，2、棋盘系统，负责绘制画面，3、规则系统，负责判定诸如犯规、输赢等。第一类对象（玩家对象）负责接受用户输入，并告知第二类对象（棋盘对象）棋子布局的变化，棋盘对象接收到了棋子的i变化就要负责在屏幕上面显示出这种变化，同时利用第三类对象（规则系统）来对棋局进行判定。',2,'',0,103) [ RunTime:0.001353s ]
+
+[ 2014-08-17T19:28:04+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/article/autosave.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000138s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000693s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000097s ]
+SQL: SHOW COLUMNS FROM `onethink_document` [ RunTime:0.004293s ]
+SQL: SELECT * FROM `onethink_document` WHERE ( `name` = 'pop_oop' ) AND ( `id` <> '103' ) LIMIT 1   [ RunTime:0.000910s ]
+SQL: SELECT `status` FROM `onethink_document` WHERE ( `id` = 103 ) LIMIT 1   [ RunTime:0.000664s ]
+SQL: UPDATE `onethink_document` SET `title`='面向过程和面向对象的区别',`name`='pop_oop',`description`='',`link_id`=0,`type`=2,`attach`=0,`view`=0,`comment`=0,`level`=0,`display`=0,`create_time`=1408274884,`cover_id`=0,`pid`=0,`model_id`=2,`category_id`=50,`root`=0,`update_time`=1408274884,`status`=3,`position`=0 WHERE ( `id` = 103 ) [ RunTime:0.000514s ]
+SQL: SHOW COLUMNS FROM `onethink_document_article` [ RunTime:0.004075s ]
+NOTIC: [8] Undefined variable: id X:\www\onethink\Application\Admin\Model\DocumentModel.class.php 第 554 行.
+SQL: UPDATE `onethink_document_article` SET `content`='面向过程就是分析出解决问题所需要的步骤，然后用函数把这些步骤一步一步实现，使用的时候一个一个依次调用就可以了。\r\n<br>\r\n面向对象是把构成问题事务分解成各个对象，建立对象的目的不是为了完成一个步骤，而是为了描叙某个事物在整个解决问题的步骤中的行为。\r\n<br>\r\n例如五子棋，面向过程的设计思路就是首先分析问题的步骤：1、开始游戏，2、黑子先走，3、绘制画面，4、判断输赢，5、轮到白子，6、绘制画面，7、判断输赢，8、返回步骤2，9、输出最后结果。把上面每个步骤用分别的函数来实现，问题就解决了。\r\n<br>\r\n而面向对象的设计则是从另外的思路来解决问题。整个五子棋可以分为 1、黑白双方，这两方的行为是一模一样的，2、棋盘系统，负责绘制画面，3、规则系统，负责判定诸如犯规、输赢等。第一类对象（玩家对象）负责接受用户输入，并告知第二类对象（棋盘对象）棋子布局的变化，棋盘对象接收到了棋子的i变化就要负责在屏幕上面显示出这种变化，同时利用第三类对象（规则系统）来对棋局进行判定。',`parse`=2,`template`='',`bookmark`=0 WHERE ( `id` = 103 ) [ RunTime:0.000532s ]
+
+[ 2014-08-17T19:28:08+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/article/update.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000231s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001523s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000111s ]
+SQL: SHOW COLUMNS FROM `onethink_document` [ RunTime:0.007179s ]
+SQL: SELECT `id` FROM `onethink_document` WHERE ( `root` = 0 ) AND ( `name` = 'pop_oop' ) AND ( `id` <> '103' ) LIMIT 1   [ RunTime:0.001673s ]
+SQL: SELECT `status` FROM `onethink_document` WHERE ( `id` = 103 ) LIMIT 1   [ RunTime:0.002447s ]
+SQL: UPDATE `onethink_document` SET `title`='面向过程和面向对象的区别',`name`='pop_oop',`description`='',`link_id`=0,`type`=2,`attach`=0,`view`=0,`comment`=0,`level`=0,`display`=0,`create_time`=1408274888,`cover_id`=0,`pid`=0,`model_id`=2,`category_id`=50,`root`=0,`update_time`=1408274888,`status`=1,`position`=0 WHERE ( `id` = 103 ) [ RunTime:0.002331s ]
+SQL: SHOW COLUMNS FROM `onethink_document_article` [ RunTime:0.005821s ]
+NOTIC: [8] Undefined variable: id X:\www\onethink\Application\Admin\Model\DocumentModel.class.php 第 177 行.
+SQL: UPDATE `onethink_document_article` SET `content`='面向过程就是分析出解决问题所需要的步骤，然后用函数把这些步骤一步一步实现，使用的时候一个一个依次调用就可以了。\r\n<br><br>\r\n面向对象是把构成问题事务分解成各个对象，建立对象的目的不是为了完成一个步骤，而是为了描叙某个事物在整个解决问题的步骤中的行为。\r\n<br><br>\r\n例如五子棋，面向过程的设计思路就是首先分析问题的步骤：1、开始游戏，2、黑子先走，3、绘制画面，4、判断输赢，5、轮到白子，6、绘制画面，7、判断输赢，8、返回步骤2，9、输出最后结果。把上面每个步骤用分别的函数来实现，问题就解决了。\r\n<br><br>\r\n而面向对象的设计则是从另外的思路来解决问题。整个五子棋可以分为 1、黑白双方，这两方的行为是一模一样的，2、棋盘系统，负责绘制画面，3、规则系统，负责判定诸如犯规、输赢等。第一类对象（玩家对象）负责接受用户输入，并告知第二类对象（棋盘对象）棋子布局的变化，棋盘对象接收到了棋子的i变化就要负责在屏幕上面显示出这种变化，同时利用第三类对象（规则系统）来对棋局进行判定。',`parse`=2,`template`='',`bookmark`=0 WHERE ( `id` = 103 ) [ RunTime:0.002486s ]
+NOTIC: [8] Undefined variable: id X:\www\onethink\Application\Admin\Model\DocumentModel.class.php 第 186 行.
+
+[ 2014-08-17T19:35:16+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/user/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000144s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000775s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000086s ]
+SQL: SHOW COLUMNS FROM `onethink_ucenter_member` [ RunTime:0.005514s ]
+SQL: SELECT * FROM `onethink_ucenter_member` WHERE ( `username` = 'starry' ) LIMIT 1   [ RunTime:0.002688s ]
+SQL: SELECT * FROM `onethink_ucenter_member` WHERE ( `email` = '1249369379@qq.com' ) LIMIT 1   [ RunTime:0.001203s ]
+
+[ 2014-08-17T19:35:26+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/user/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000143s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000695s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000119s ]
+SQL: SHOW COLUMNS FROM `onethink_ucenter_member` [ RunTime:0.004756s ]
+SQL: SELECT * FROM `onethink_ucenter_member` WHERE ( `username` = 'starry' ) LIMIT 1   [ RunTime:0.001425s ]
+
+[ 2014-08-17T19:35:43+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/user/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000968s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000127s ]
+SQL: SHOW COLUMNS FROM `onethink_ucenter_member` [ RunTime:0.006441s ]
+SQL: SELECT * FROM `onethink_ucenter_member` WHERE ( `username` = 'starry' ) LIMIT 1   [ RunTime:0.001265s ]
+SQL: SELECT * FROM `onethink_ucenter_member` WHERE ( `email` = '522964493@qq.com' ) LIMIT 1   [ RunTime:0.002039s ]
+SQL: INSERT INTO `onethink_ucenter_member` (`username`,`password`,`email`,`reg_time`,`reg_ip`,`update_time`,`status`) VALUES ('starry','9823e71d933f21f774238b8bbfd012ca','522964493@qq.com',1408275342,'2130706433',1408275342,1) [ RunTime:0.002305s ]
+SQL: SHOW COLUMNS FROM `onethink_member` [ RunTime:0.005394s ]
+SQL: INSERT INTO `onethink_member` (`uid`,`nickname`,`status`) VALUES (26,'starry',1) [ RunTime:0.001633s ]
+
+[ 2014-08-17T19:36:27+08:00 ] 127.0.0.1 /onethink/index.php?s=/admin/user/submitpassword.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000133s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000607s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000078s ]
+SQL: SHOW COLUMNS FROM `onethink_ucenter_member` [ RunTime:0.007392s ]
+SQL: SELECT `password` FROM `onethink_ucenter_member` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000486s ]
+NOTIC: [8] Use of undefined constant data - assumed 'data' X:\www\onethink\Application\User\Model\UcenterMemberModel.class.php 第 244 行.
+SQL: UPDATE `onethink_ucenter_member` SET `password`='43d124e6a7503e6af206188787de9e53',`reg_time`=1408275387,`reg_ip`='2130706433',`update_time`=1408275387,`status`=1 WHERE ( `id` = 1 ) [ RunTime:0.000616s ]
+
